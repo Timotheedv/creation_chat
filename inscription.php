@@ -30,7 +30,7 @@ if(isset($_POST['button_inscription'])){
                 $req = mysqli_query($con, "INSERT INTO utilisateurs VALUES (NULL, '$email', '$mdp1')");
                 if($req){
                     //si non
-                    $_SESSION['message'] = "<p class = 'message'>Votre compte a été crée avec succès! </p>";
+                    $_SESSION['message'] = "<p class = 'message_inscription'>Votre compte a été crée avec succès! </p>";
                     //redirection vers connexion
                     header("location:index.php");
                 }else{
